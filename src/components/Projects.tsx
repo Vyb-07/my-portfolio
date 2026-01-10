@@ -17,13 +17,29 @@ const projects = [
         period: "Apr 2022 - June 2022",
         link: "#",
         github: "#"
+    },
+    {
+        title: "Taskify",
+        desc: "An end-to-end task management backend that generates tasks, sends smart reminders, syncs calendars, enables collaboration, tracks streaks, and actively prevents productivity drop-offs.",
+        tech: ["Spring Boot", "Mongo DB", "Redis", "Spring Security"],
+        period: "2024",
+        link: "#",
+        github: "#"
+    },
+    {
+        title: "Stockpulse",
+        desc: "A Streamlit-based stock prediction app that visualizes market trends and uses machine learning on historical data to generate interactive, data-driven price forecasts.",
+        tech: ["Python", "Tensorflow", "Streamlit"],
+        period: "2024",
+        link: "#",
+        github: "#"
     }
 ];
 
 export function Projects() {
     return (
         <section id="projects">
-            <h2 className="text-4xl font-black mb-10 text-center uppercase tracking-tight">Projects</h2>
+            <h2 className="text-5xl md:text-7xl font-black mb-16 text-center uppercase tracking-tight text-black dark:text-white">Projects</h2>
             <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
                 {projects.map((project, idx) => (
                     <Card key={idx} className="group hover:bg-neo-primary hover:text-white transition-colors">

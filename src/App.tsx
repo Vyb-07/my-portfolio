@@ -1,20 +1,23 @@
 import { Hero } from './components/Hero'
-import { Experience } from './components/Experience'
+import { Journey } from './components/Journey'
 import { Projects } from './components/Projects'
 import { Contact } from './components/Contact'
 import { Skills } from './components/Skills'
 
 import { GridBackground } from './components/ui/GridBackground'
+import { ThemeToggle } from './components/ui/ThemeToggle'
 
 function App() {
   return (
-    <div className="min-h-screen pb-20 relative">
+    <div className="min-h-screen pb-20 relative transition-colors duration-300 dark:bg-slate-900">
+      <ThemeToggle />
       <GridBackground />
-      {/* Navigation could go here, but doing single page scroll for now */}
       <Hero />
       <div className="container mx-auto px-4 space-y-32">
         <Skills />
-        <Experience />
+      </div>
+      <Journey />
+      <div className="container mx-auto px-4 space-y-32 mt-32">
         <Projects />
         <Contact />
       </div>

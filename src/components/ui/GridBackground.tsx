@@ -20,19 +20,28 @@ export function GridBackground() {
     }, []);
 
     return (
-        <div ref={containerRef} className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
-            {/* Base Grid */}
+        <div ref={containerRef} className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-neo-bg dark:bg-slate-900 transition-colors duration-300">
+            {/* Base Grid - Light Mode */}
             <div
-                className="absolute inset-0 z-0 bg-transparent"
+                className="absolute inset-0 z-0 bg-transparent opacity-100 dark:opacity-0 transition-opacity duration-300"
                 style={{
                     backgroundImage: 'linear-gradient(#cbd5e1 1px, transparent 1px), linear-gradient(90deg, #cbd5e1 1px, transparent 1px)',
                     backgroundSize: '50px 50px',
                 }}
             />
 
+            {/* Base Grid - Dark Mode (White Lines) */}
+            <div
+                className="absolute inset-0 z-0 bg-transparent opacity-0 dark:opacity-40 transition-opacity duration-300"
+                style={{
+                    backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)',
+                    backgroundSize: '50px 50px',
+                }}
+            />
+
             {/* Hover Spotlight Effect */}
             <motion.div
-                className="absolute z-10 w-64 h-64 bg-neo-primary/10 rounded-full blur-3xl pointer-events-none"
+                className="absolute z-10 w-64 h-64 bg-neo-primary/10 dark:bg-white/5 rounded-full blur-3xl pointer-events-none"
                 animate={{
                     x: mousePos.x - 128,
                     y: mousePos.y - 128,
@@ -42,18 +51,6 @@ export function GridBackground() {
                     damping: 20,
                     stiffness: 200,
                     mass: 0.1
-                }}
-            />
-
-            {/* Dynamic Grid Lines Spotlight (Subtle) */}
-            <div
-                className="absolute inset-0 z-0 opacity-0 transition-opacity duration-300 pointer-events-none"
-                style={{
-                    backgroundImage: 'linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)',
-                    backgroundSize: '50px 50px',
-                    maskImage: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, black 0%, transparent 40%)`,
-                    WebkitMaskImage: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, black 0%, transparent 40%)`,
-                    opacity: 1
                 }}
             />
         </div>

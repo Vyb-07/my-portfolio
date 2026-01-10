@@ -29,7 +29,7 @@ export function Contact() {
 
     return (
         <section id="contact" className="py-20 px-4 text-neo-text dark:text-white">
-            <h2 className="text-4xl md:text-5xl font-black text-black mb-16 text-center uppercase tracking-tight">
+            <h2 className="text-5xl md:text-7xl font-black text-black dark:text-white mb-16 text-center uppercase tracking-tight">
                 Let's Connect
             </h2>
 
@@ -43,8 +43,11 @@ export function Contact() {
                 {/* Status Block */}
                 <motion.div
                     variants={item}
-                    className="md:col-span-2 bg-neo-text text-white p-8 rounded-neo border-2 border-neo-text shadow-neo flex flex-col justify-between min-h-[200px]"
+                    className="md:col-span-2 bg-neo-text text-white p-8 rounded-neo border-2 border-neo-text shadow-neo flex flex-col justify-between min-h-[200px] group relative overflow-hidden"
                 >
+                    {/* Shine Effect */}
+                    <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:animate-[shine_1s_ease-in-out]" />
+
                     <div className="flex items-center gap-3" >
                         <span className="relative flex h-4 w-4">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -65,6 +68,9 @@ export function Contact() {
                     onClick={copyEmail}
                     whileHover={{ y: -4 }}
                 >
+                    {/* Shine Effect - Dark for white background */}
+                    <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-black/10 to-transparent skew-x-12 group-hover:animate-[shine_1s_ease-in-out]" />
+
                     <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
                         {copied ? <CheckCircle className="text-green-500" /> : <Copy className='text-black' />}
                     </div>
@@ -85,8 +91,11 @@ export function Contact() {
                     variants={item}
                     href="https://linkedin.com/in/VaibhavGudali"
                     target="_blank"
-                    className="md:col-span-1 bg-[#0077b5] text-white p-6 rounded-neo border-2 border-neo-border shadow-neo hover:shadow-neo-lg hover:-translate-y-1 transition-all flex flex-col items-center justify-center gap-4 group"
+                    className="md:col-span-1 bg-[#0077b5] text-white p-6 rounded-neo border-2 border-neo-border shadow-neo hover:shadow-neo-lg hover:-translate-y-1 transition-all flex flex-col items-center justify-center gap-4 group relative overflow-hidden"
                 >
+                    {/* Shine Effect */}
+                    <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:animate-[shine_1s_ease-in-out]" />
+
                     <Linkedin size={48} className="group-hover:scale-110 transition-transform" />
                     <span className="font-bold">LINKEDIN</span>
                 </motion.a>
@@ -96,8 +105,11 @@ export function Contact() {
                     variants={item}
                     href="https://github.com/Vyb-07"
                     target="_blank"
-                    className="md:col-span-1 bg-[#181717] text-white p-6 rounded-neo border-2 border-neo-border shadow-neo hover:shadow-neo-lg hover:-translate-y-1 transition-all flex flex-col items-center justify-center gap-4 group"
+                    className="md:col-span-1 bg-[#181717] text-white p-6 rounded-neo border-2 border-neo-border shadow-neo hover:shadow-neo-lg hover:-translate-y-1 transition-all flex flex-col items-center justify-center gap-4 group relative overflow-hidden"
                 >
+                    {/* Shine Effect */}
+                    <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:animate-[shine_1s_ease-in-out]" />
+
                     <Github size={48} className="group-hover:scale-110 transition-transform" />
                     <span className="font-bold">GITHUB</span>
                 </motion.a>
@@ -105,8 +117,11 @@ export function Contact() {
                 {/* Phone/Location or Extra */}
                 <motion.div
                     variants={item}
-                    className="md:col-span-2 bg-neo-accent p-6 rounded-neo border-2 border-neo-border shadow-neo flex items-center justify-between px-8"
+                    className="md:col-span-2 bg-neo-accent p-6 rounded-neo border-2 border-neo-border shadow-neo flex items-center justify-between px-8 group relative overflow-hidden"
                 >
+                    {/* Shine Effect */}
+                    <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:animate-[shine_1s_ease-in-out]" />
+
                     <div>
                         <p className="font-bold text-xs uppercase opacity-70 mb-1">Location</p>
                         <p className="font-black text-xl">India</p>
@@ -118,6 +133,14 @@ export function Contact() {
                 </motion.div>
 
             </motion.div>
+
+            {/* Custom Animation Style for Shine */}
+            <style>{`
+                @keyframes shine {
+                    0% { left: -100%; }
+                    100% { left: 200%; }
+                }
+            `}</style>
         </section>
     )
 }
