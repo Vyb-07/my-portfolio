@@ -7,12 +7,21 @@ export function Hero() {
     const y2 = useTransform(scrollY, [0, 500], [0, -100])
 
     return (
-        <div className="relative h-screen flex items-center justify-center overflow-hidden bg-neo-bg dark:bg-slate-900 transition-colors duration-300">
+        <div className="relative h-screen flex items-center justify-center overflow-hidden bg-neo-bg dark:bg-slate-950 transition-colors duration-300">
             {/* Abstract Background Shapes */}
             <motion.div
                 style={{ y: y1 }}
-                className="absolute top-20 left-10 w-32 h-32 bg-neo-accent rounded-full border-2 border-neo-border dark:border-white opacity-50 blur-sm dark:opacity-20"
-            />
+                className="absolute top-20 left-10 w-32 h-32 bg-neo-accent dark:bg-slate-200 rounded-full border-2 border-neo-border dark:border-none opacity-50 blur-sm transition-all duration-300 dark:overflow-hidden dark:[clip-path:inset(0_0_15%_15%_round_100%)]"
+            >
+                {/* Crescent Shadow Overlay */}
+                <div className="hidden dark:block absolute inset-0 bg-slate-950 -translate-x-5 translate-y-5 rounded-full" />
+
+                {/* Craters */}
+                <div className="hidden dark:block absolute top-[20%] left-[40%] w-4 h-4 bg-slate-400/20 rounded-full blur-[1px]" />
+                <div className="hidden dark:block absolute top-[50%] left-[30%] w-3 h-3 bg-slate-400/20 rounded-full blur-[1px]" />
+                <div className="hidden dark:block absolute top-[65%] left-[55%] w-5 h-5 bg-slate-400/20 rounded-full blur-[1px]" />
+                <div className="hidden dark:block absolute top-[40%] left-[60%] w-2 h-2 bg-slate-400/20 rounded-full blur-[1px]" />
+            </motion.div>
             <motion.div
                 style={{ y: y2 }}
                 className="absolute bottom-20 right-10 w-48 h-48 bg-neo-primary rounded-neo border-2 border-neo-border dark:border-white opacity-20 rotate-12 dark:opacity-20"
@@ -61,7 +70,7 @@ export function Hero() {
                         <div className="absolute inset-0 bg-neo-accent/20 z-20 mix-blend-multiply opacity-0 dark:opacity-100 pointer-events-none" />
                     </div>
                     {/* Decorative rectangle behind image */}
-                    <div className="absolute -z-10 top-4 -right-4 w-full h-full bg-neo-primary rounded-neo border-4 border-neo-border dark:border-white" />
+                    <div className="absolute -z-10 top-4 -right-4 w-full h-full bg-neo-primary dark:bg-slate-800 rounded-neo border-4 border-neo-border dark:border-white transition-colors duration-300" />
                 </motion.div>
             </div>
         </div>

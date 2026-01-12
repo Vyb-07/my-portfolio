@@ -20,7 +20,7 @@ export function GridBackground() {
     }, []);
 
     return (
-        <div ref={containerRef} className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-neo-bg dark:bg-slate-900 transition-colors duration-300">
+        <div ref={containerRef} className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-neo-bg dark:bg-slate-950 transition-colors duration-300">
             {/* Base Grid - Light Mode */}
             <div
                 className="absolute inset-0 z-0 bg-transparent opacity-100 dark:opacity-0 transition-opacity duration-300"
@@ -32,7 +32,7 @@ export function GridBackground() {
 
             {/* Base Grid - Dark Mode (White Lines) */}
             <div
-                className="absolute inset-0 z-0 bg-transparent opacity-0 dark:opacity-40 transition-opacity duration-300"
+                className="absolute inset-0 z-0 bg-transparent opacity-0 dark:opacity-10 transition-opacity duration-300"
                 style={{
                     backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)',
                     backgroundSize: '50px 50px',

@@ -43,7 +43,7 @@ export function Contact() {
                 {/* Status Block */}
                 <motion.div
                     variants={item}
-                    className="md:col-span-2 bg-neo-text text-white p-8 rounded-neo border-2 border-neo-text shadow-neo flex flex-col justify-between min-h-[200px] group relative overflow-hidden"
+                    className="md:col-span-2 bg-neo-text dark:bg-slate-800 text-white p-8 rounded-neo border-2 border-neo-text dark:border-white shadow-neo dark:shadow-[5px_5px_0px_0px_#ffffff] flex flex-col justify-between min-h-[200px] group relative overflow-hidden"
                 >
                     {/* Shine Effect */}
                     <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:animate-[shine_1s_ease-in-out]" />
@@ -64,24 +64,24 @@ export function Contact() {
                 {/* Email Block */}
                 <motion.div
                     variants={item}
-                    className="md:col-span-2 bg-white p-8 rounded-neo border-2 border-neo-border shadow-neo hover:shadow-neo-lg transition-all cursor-pointer group relative overflow-hidden"
+                    className="md:col-span-2 bg-white dark:bg-slate-800 p-8 rounded-neo border-2 border-neo-border dark:border-white shadow-neo dark:shadow-[5px_5px_0px_0px_#ffffff] hover:shadow-neo-lg transition-all cursor-pointer group relative overflow-hidden"
                     onClick={copyEmail}
                     whileHover={{ y: -4 }}
                 >
                     {/* Shine Effect - Dark for white background */}
-                    <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-black/10 to-transparent skew-x-12 group-hover:animate-[shine_1s_ease-in-out]" />
+                    <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-black/10 dark:via-white/20 to-transparent skew-x-12 group-hover:animate-[shine_1s_ease-in-out]" />
 
                     <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
-                        {copied ? <CheckCircle className="text-green-500" /> : <Copy className='text-black' />}
+                        {copied ? <CheckCircle className="text-green-500" /> : <Copy className='text-black dark:text-white' />}
                     </div>
                     <div className="h-full flex flex-col justify-between">
-                        <div className="w-12 h-12 bg-neo-accent rounded-full border-2 border-neo-border flex items-center justify-center mb-4">
-                            <Mail size={24} />
+                        <div className="w-12 h-12 bg-neo-accent dark:bg-amber-600 rounded-full border-2 border-neo-border dark:border-white flex items-center justify-center mb-4">
+                            <Mail size={24} className="text-neo-text dark:text-white" />
                         </div>
                         <div>
-                            <p className="text-sm font-bold text-slate-500 mb-1">DROP A MAIL</p>
-                            <h3 className="text-xl md:text-2xl font-black text-gray-600 truncate">vaibhavgudali@gmail.com</h3>
-                            <p className="text-xs font-bold text-neo-primary mt-2">{copied ? "COPIED TO CLIPBOARD!" : "CLICK TO COPY"}</p>
+                            <p className="text-sm font-bold text-slate-500 dark:text-slate-400 mb-1">DROP A MAIL</p>
+                            <h3 className="text-xl md:text-2xl font-black text-gray-600 dark:text-white truncate">vaibhavgudali@gmail.com</h3>
+                            <p className="text-xs font-bold text-neo-primary dark:text-blue-400 mt-2">{copied ? "COPIED TO CLIPBOARD!" : "CLICK TO COPY"}</p>
                         </div>
                     </div>
                 </motion.div>
@@ -91,7 +91,7 @@ export function Contact() {
                     variants={item}
                     href="https://linkedin.com/in/VaibhavGudali"
                     target="_blank"
-                    className="md:col-span-1 bg-[#0077b5] text-white p-6 rounded-neo border-2 border-neo-border shadow-neo hover:shadow-neo-lg hover:-translate-y-1 transition-all flex flex-col items-center justify-center gap-4 group relative overflow-hidden"
+                    className="md:col-span-1 bg-[#0077b5] text-white p-6 rounded-neo border-2 border-neo-border dark:border-white shadow-neo dark:shadow-[5px_5px_0px_0px_#ffffff] hover:shadow-neo-lg hover:-translate-y-1 transition-all flex flex-col items-center justify-center gap-4 group relative overflow-hidden"
                 >
                     {/* Shine Effect */}
                     <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:animate-[shine_1s_ease-in-out]" />
@@ -105,7 +105,7 @@ export function Contact() {
                     variants={item}
                     href="https://github.com/Vyb-07"
                     target="_blank"
-                    className="md:col-span-1 bg-[#181717] text-white p-6 rounded-neo border-2 border-neo-border shadow-neo hover:shadow-neo-lg hover:-translate-y-1 transition-all flex flex-col items-center justify-center gap-4 group relative overflow-hidden"
+                    className="md:col-span-1 bg-[#181717] dark:bg-slate-700 text-white p-6 rounded-neo border-2 border-neo-border dark:border-white shadow-neo dark:shadow-[5px_5px_0px_0px_#ffffff] hover:shadow-neo-lg hover:-translate-y-1 transition-all flex flex-col items-center justify-center gap-4 group relative overflow-hidden"
                 >
                     {/* Shine Effect */}
                     <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:animate-[shine_1s_ease-in-out]" />
@@ -117,18 +117,18 @@ export function Contact() {
                 {/* Phone/Location or Extra */}
                 <motion.div
                     variants={item}
-                    className="md:col-span-2 bg-neo-accent p-6 rounded-neo border-2 border-neo-border shadow-neo flex items-center justify-between px-8 group relative overflow-hidden"
+                    className="md:col-span-2 bg-neo-accent dark:bg-amber-600 p-6 rounded-neo border-2 border-neo-border dark:border-white shadow-neo dark:shadow-[5px_5px_0px_0px_#ffffff] flex items-center justify-between px-8 group relative overflow-hidden"
                 >
                     {/* Shine Effect */}
                     <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:animate-[shine_1s_ease-in-out]" />
 
                     <div>
-                        <p className="font-bold text-xs uppercase opacity-70 mb-1">Location</p>
-                        <p className="font-black text-xl">India</p>
+                        <p className="font-bold text-xs uppercase opacity-70 mb-1 text-neo-text dark:text-white/70">Location</p>
+                        <p className="font-black text-xl text-neo-text dark:text-white">India</p>
                     </div>
                     <div className="text-right">
-                        <p className="font-bold text-xs uppercase opacity-70 mb-1">Phone</p>
-                        <p className="font-black text-xl">+91 7032353043</p>
+                        <p className="font-bold text-xs uppercase opacity-70 mb-1 text-neo-text dark:text-white/70">Phone</p>
+                        <p className="font-black text-xl text-neo-text dark:text-white">+91 7032353043</p>
                     </div>
                 </motion.div>
 

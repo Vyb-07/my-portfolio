@@ -25,7 +25,7 @@ const journeyItems = [
             "Automated CI/CD pipelines to AWS.",
             "Collaborated on enterprise cloud solutions."
         ],
-        tags: ["AWS", "Kubernetes", "Docekr"]
+        tags: ["AWS", "Kubernetes", "Docker"]
     },
     {
         type: "education",

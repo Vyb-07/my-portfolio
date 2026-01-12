@@ -9,17 +9,19 @@ import { ThemeToggle } from './components/ui/ThemeToggle'
 
 function App() {
   return (
-    <div className="min-h-screen pb-20 relative transition-colors duration-300 dark:bg-slate-900">
+    <div className="min-h-screen pb-20 relative transition-colors duration-300">
       <ThemeToggle />
       <GridBackground />
-      <Hero />
-      <div className="container mx-auto px-4 space-y-32">
-        <Skills />
-      </div>
-      <Journey />
-      <div className="container mx-auto px-4 space-y-32 mt-32">
-        <Projects />
-        <Contact />
+      <div className="relative z-10">
+        <Hero />
+        <div className="container mx-auto px-4 space-y-32">
+          <Skills />
+        </div>
+        <Journey />
+        <div className="container mx-auto px-4 space-y-32 mt-32">
+          <Projects />
+          <Contact />
+        </div>
       </div>
     </div>
   )
